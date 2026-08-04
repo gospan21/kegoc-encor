@@ -406,31 +406,112 @@
           <p>Участник может указать текущий опыт, рабочие задачи, интересующие темы и вопросы, которые желательно разобрать во время курса.</p>
         </div>
         <div class="card">
-          <form class="course-form" action="https://formsubmit.co/ospanovzhanibek@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="ENCOR KEGOC: новая анкета участника" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
-            <div class="form-grid">
-              <div class="field"><label>ФИО *</label><input name="ФИО" type="text" placeholder="Введите ФИО" required /></div>
-              <div class="field"><label>Должность *</label><input name="Должность" type="text" placeholder="Например: Network Engineer" required /></div>
-              <div class="field"><label>Подразделение / отдел</label><input name="Подразделение" type="text" placeholder="ИТС, ДСТС или другое" /></div>
-              <div class="field"><label>Рабочий email *</label><input name="email" type="email" placeholder="name@company.kz" required /></div>
-              <div class="field"><label>Телефон / WhatsApp</label><input name="Телефон" type="tel" placeholder="+7 ..." /></div>
-              <div class="field"><label>Уровень Cisco</label><select name="Уровень Cisco"><option>Начальный</option><option>CCNA / уверенный junior</option><option>Средний инженерный уровень</option><option>Продвинутый уровень</option></select></div>
-              <div class="field"><label>Опыт с OSPF / BGP</label><select name="Опыт OSPF/BGP"><option>Нет опыта</option><option>Теория, без практики</option><option>Настраивал в лаборатории</option><option>Работаю в production-среде</option></select></div>
-              <div class="field"><label>Опыт с Python / Automation</label><select name="Опыт Python/Automation"><option>Нет опыта</option><option>Базовый Python</option><option>Пишу скрипты для задач</option><option>Использую automation/API в работе</option></select></div>
-              <div class="field full"><label>С какими задачами работаете сейчас?</label><textarea name="Текущие задачи" placeholder="Например: маршрутизация, коммутация, wireless, безопасность, мониторинг, troubleshooting..."></textarea></div>
-              <div class="field full"><label>Какие темы особенно важны?</label><textarea name="Приоритетные темы" placeholder="OSPF, BGP, SD-WAN, DNA Center, NETCONF/RESTCONF, Python, ACL, AAA..."></textarea></div>
-              <div class="field full"><label>Вопросы к лектору до начала курса</label><textarea name="Вопросы" placeholder="Оставьте вопросы, которые хотели бы разобрать на обучении"></textarea></div>
-              <div class="field full"><label>Ожидаемый результат от обучения</label><textarea name="Ожидаемый результат" placeholder="Что должно стать понятнее или полезнее после 5 дней обучения?"></textarea></div>
+        <form id="courseProfileForm"
+              class="course-form"
+              action="https://script.google.com/macros/s/AKfycbwTRh-VDH3osEcog4xvVLZpk1fDxboKx-NgPc8tMYt_dIjyte6gJzjUykrd_etax0fn/exec"
+              method="POST"
+              target="hiddenSubmitFrame">
+        
+          <input type="hidden" name="Курс" value="ENCOR KEGOC">
+          <input type="hidden" name="Сайт" value="https://gospan21.github.io/kegoc-encuired>
             </div>
-            <label class="check-row"><input type="checkbox" required /> <span>Согласен(на) передать указанную информацию организатору курса для подготовки обучения.</span></label>
-            <div class="submit-row">
-              <button class="btn" type="submit">Отправить анкету</button>
-              <span class="submit-hint">Данные используются только для подготовки и проведения обучения.</span>
+        
+            <div class="field">
+              <label>Должность *</label>
+              <input name="Должность" type="text" required>
             </div>
-          </form>
+        
+            <div class="field">
+              <label>Подразделение / отдел</label>
+              <input name="Подразделение" type="text">
+            </div>
+        
+            <div class="field">
+              <label>Рабочий email *</label>
+              <input name="email" type="email" required>
+            </div>
+        
+            <div class="field">
+              <label>Телефон / WhatsApp</label>
+              <input name="Телефон" type="tel">
+            </div>
+        
+            <div class="field">
+              <label>Уровень Cisco</label>
+              <select name="Уровень Cisco">
+                <option>Начальный</option>
+                <option>CCNA / уверенный junior</option>
+                <option>Средний инженерный уровень</option>
+                <option>Продвинутый уровень</option>
+              </select>
+            </div>
+        
+            <div class="field">
+              <label>Опыт с OSPF / BGP</label>
+              <select name="Опыт OSPF/BGP">
+                <option>Нет опыта</option>
+                <option>Теория без практики</option>
+                <option>Настраивал в лаборатории</option>
+                <option>Работаю в production среде</option>
+              </select>
+            </div>
+        
+            <div class="field">
+              <label>Опыт с Python / Automation</label>
+              <select name="Опыт Python/Automation">
+                <option>Нет опыта</option>
+                <option>Базовый Python</option>
+                <option>Пишу скрипты для задач</option>
+                <option>Использую automation/API в работе</option>
+              </select>
+            </div>
+        
+            <div class="field full">
+              <label>С какими задачами работаете сейчас?</label>
+              <textarea name="Текущие задачи"></textarea>
+            </div>
+        
+            <div class="field full">
+              <label>Какие темы особенно важны?</label>
+              <textarea name="Приоритетные темы"></textarea>
+            </div>
+        
+            <div class="field full">
+              <label>Вопросы к лектору до начала курса</label>
+              <textarea name="Вопросы"></textarea>
+            </div>
+        
+            <div class="field full">
+              <label>Ожидаемый результат от обучения</label>
+              <textarea name="Ожидаемый результат"></textarea>
+            </div>
+        
+          </div>
+        
+          <label class="check-row">
+            <input type="checkbox" required>
+            <span>
+              Согласен(на) предоставить информацию для подготовки обучения.
+            </span>
+          </label>
+        
+          <div class="submit-row">
+            <button id="profileSubmitBtn" class="btn" type="submit">
+              Отправить профиль
+            </button>
+        
+            <span id="formStatus" class="submit-hint">
+              Данные используются только для подготовки обучения.
+            </span>
+          </div>
+        
+          <iframe
+              name="hiddenSubmitFrame"
+              id="hiddenSubmitFrame"
+              style="display:none;">
+          </iframe>
+        
+        </form>
         </div>
       </div>
     </section>
@@ -468,5 +549,34 @@
       Подготовлено для KEGOC · Оффлайн обучение · Астана
     </footer>
   </div>
+    <script>
+  const form=document.getElementById('courseProfileForm');
+  const iframe=document.getElementById('hiddenSubmitFrame');
+  const status=document.getElementById('formStatus');
+  const btn=document.getElementById('profileSubmitBtn');
+  
+  let submitted=false;
+  
+  form.addEventListener('submit',()=>{
+      submitted=true;
+      btn.disabled=true;
+      btn.innerText='Отправка...';
+      status.innerText='Отправка данных...';
+  });
+  
+  iframe.addEventListener('load',()=>{
+      if(!submitted) return;
+  
+      submitted=false;
+  
+      btn.disabled=false;
+      btn.innerText='Отправить профиль';
+  
+      status.innerText='✅ Спасибо! Профиль успешно отправлен.';
+      status.style.color='#68f3c8';
+  
+      form.reset();
+  });
+  </script>
 </body>
 </html>
